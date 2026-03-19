@@ -12,7 +12,7 @@ body {
   background: #f8fbff;
 }
 
-/* NAVBAR */
+/* NAV */
 header {
   display: flex;
   justify-content: space-between;
@@ -62,7 +62,7 @@ nav a {
   to { transform: scale(1.1); }
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
   padding: 70px 20px;
   text-align: center;
@@ -75,12 +75,12 @@ nav a {
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 30px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
   background: white;
   padding: 20px;
@@ -93,7 +93,6 @@ nav a {
   transform: translateY(-5px);
 }
 
-/* IMAGES */
 .card img {
   width: 100%;
   border-radius: 8px;
@@ -123,9 +122,29 @@ nav a {
 }
 
 .metric {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: #005eb8;
+}
+
+/* LOGO PLACEHOLDER */
+.logo-box {
+  height: 80px;
+  background: #eef3f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* TEAM */
+.team img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* CONTACT */
@@ -146,6 +165,14 @@ button {
   color: white;
   border: none;
 }
+
+/* FOOTER */
+footer {
+  background: #002b5c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 </style>
 </head>
 
@@ -156,7 +183,7 @@ button {
   <nav>
     <a href="#offering">Offering</a>
     <a href="#solutions">Solutions</a>
-    <a href="#investor">Investors</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -164,10 +191,9 @@ button {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-
   <div class="hero-content">
-    <h1>AI-Powered Healthcare Wearables</h1>
-    <p>Detect. Monitor. Predict. Prevent.</p>
+    <h1>Medical-Grade Remote Patient Monitoring</h1>
+    <p>AI-powered wearables to detect, monitor and predict critical conditions.</p>
   </div>
 </section>
 
@@ -176,30 +202,11 @@ button {
   <h2>Our Offering</h2>
 
   <div class="grid">
-    <div class="card">
-      <h3>Disease Detection</h3>
-      <p>Identify when a condition occurs in real time.</p>
-    </div>
-
-    <div class="card">
-      <h3>Alerts to Primary Care</h3>
-      <p>Automatically notify doctors during critical events.</p>
-    </div>
-
-    <div class="card">
-      <h3>Disease Progression Monitoring</h3>
-      <p>Track health trends over time.</p>
-    </div>
-
-    <div class="card">
-      <h3>Remote Safety</h3>
-      <p>Monitor medication side effects remotely.</p>
-    </div>
-
-    <div class="card">
-      <h3>Predictive Prognosis</h3>
-      <p>Forecast future health risks using AI.</p>
-    </div>
+    <div class="card"><h3>Disease Detection</h3><p>Identify conditions in real time.</p></div>
+    <div class="card"><h3>Alerts to Primary Care</h3><p>Instant alerts to healthcare providers.</p></div>
+    <div class="card"><h3>Disease Progression Monitoring</h3><p>Track patient health over time.</p></div>
+    <div class="card"><h3>Remote Safety</h3><p>Monitor medication side effects remotely.</p></div>
+    <div class="card"><h3>Predictive Prognosis</h3><p>Forecast future risks using personalized edge AI.</p></div>
   </div>
 </section>
 
@@ -208,14 +215,11 @@ button {
   <h2>Our Solutions</h2>
 
   <div class="grid">
-
-    <a href="heart.html">
-      <div class="card">
-        <img src="heart.jpg">
-        <h3>Heart Attack</h3>
-        <p>Real-time detection system</p>
-      </div>
-    </a>
+    <div class="card">
+      <img src="heart.jpg">
+      <h3>Heart Attack</h3>
+      <p>Real-time cardiac monitoring</p>
+    </div>
 
     <div class="card disabled">
       <img src="stroke.jpg">
@@ -231,34 +235,79 @@ button {
       <img src="diabetes.jpg">
       <h3>Diabetes</h3>
     </div>
-
   </div>
 </section>
 
-<!-- INVESTOR -->
-<section id="investor" class="section investor">
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>
+    Arceo is a medical-grade remote patient monitoring company building intelligent wearable systems that connect patients and providers through continuous monitoring and personalized edge AI.
+  </p>
+</section>
+
+<!-- TEAM -->
+<section class="section team">
+  <h2>Our Team</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="team1.jpg">
+      <h3>Name</h3>
+      <p>Role</p>
+    </div>
+
+    <div class="card">
+      <img src="team2.jpg">
+      <h3>Name</h3>
+      <p>Role</p>
+    </div>
+
+    <div class="card">
+      <img src="team3.jpg">
+      <h3>Name</h3>
+      <p>Role</p>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="section">
+  <h2>Partners</h2>
+  <div class="grid">
+    <div class="logo-box">Partner Logo</div>
+    <div class="logo-box">Partner Logo</div>
+    <div class="logo-box">Partner Logo</div>
+  </div>
+</section>
+
+<!-- INVESTORS -->
+<section class="section">
+  <h2>Investors</h2>
+  <div class="grid">
+    <div class="logo-box">Investor Logo</div>
+    <div class="logo-box">Investor Logo</div>
+  </div>
+</section>
+
+<!-- CONSULTANTS -->
+<section class="section">
+  <h2>Consultants</h2>
+  <div class="grid">
+    <div class="logo-box">Consultant</div>
+    <div class="logo-box">Consultant</div>
+  </div>
+</section>
+
+<!-- INVESTOR SNAPSHOT -->
+<section class="section investor">
   <h2>Investor Snapshot</h2>
 
   <div class="grid">
-    <div>
-      <div class="metric">$50B+</div>
-      <p>Market Size</p>
-    </div>
-
-    <div>
-      <div class="metric">AI First</div>
-      <p>Core Technology</p>
-    </div>
-
-    <div>
-      <div class="metric">B2B + B2C</div>
-      <p>Revenue Model</p>
-    </div>
-
-    <div>
-      <div class="metric">Scalable</div>
-      <p>Growth Potential</p>
-    </div>
+    <div><div class="metric">$50B+</div><p>Market Size</p></div>
+    <div><div class="metric">Personalized Edge AI</div><p>Core Technology</p></div>
+    <div><div class="metric">Device Sales via Hospitals</div><p>Revenue Model</p></div>
+    <div><div class="metric">Scalable</div><p>Growth Potential</p></div>
   </div>
 </section>
 
@@ -273,6 +322,10 @@ button {
     <button>Send</button>
   </form>
 </section>
+
+<footer>
+  <p>© 2026 ARCEO™ Healthcare</p>
+</footer>
 
 </body>
 </html>
