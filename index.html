@@ -9,8 +9,8 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #111;
-  background: #fff;
+  color: #1a1a1a;
+  background: #f8fbff;
 }
 
 /* NAV */
@@ -20,69 +20,51 @@ header {
   padding: 20px 40px;
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
 }
 
 nav a {
   margin-left: 25px;
   text-decoration: none;
-  color: #333;
+  color: #005eb8;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
+  background: linear-gradient(135deg,#005eb8,#00a9e0);
+  color: white;
 }
 
-.hero h1 {
-  font-size: 52px;
-  font-weight: 600;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #666;
-  max-width: 600px;
-  margin: auto;
-}
-
-/* IMAGE */
-.hero img {
-  width: 80%;
-  margin-top: 40px;
-  border-radius: 20px;
-}
+.hero h1 { font-size: 48px; }
 
 /* SECTION */
 .section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .section h2 {
-  font-size: 36px;
-}
-
-.section p {
-  max-width: 700px;
-  margin: 20px auto;
-  color: #555;
+  font-size: 34px;
+  color: #005eb8;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 25px;
   margin-top: 40px;
 }
 
+/* CARD */
 .card {
-  padding: 30px;
+  background: white;
+  padding: 20px;
   border-radius: 15px;
-  background: #f5f5f7;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
 
@@ -90,24 +72,40 @@ nav a {
   transform: translateY(-8px);
 }
 
-/* SOLUTION */
+/* IMAGES */
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* DISABLED */
 .disabled {
-  opacity: 0.4;
+  opacity: 0.5;
+  position: relative;
+}
+
+.disabled::after {
+  content: "Coming Soon";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ccc;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
 }
 
 /* INVESTOR */
 .investor {
-  background: #000;
-  color: white;
+  background: #eaf4ff;
 }
 
-.investor h2 {
-  color: white;
-}
-
+/* METRIC */
 .metric {
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
+  color: #005eb8;
 }
 
 /* CONTACT */
@@ -120,12 +118,11 @@ input, textarea {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ddd;
 }
 
 button {
   padding: 12px 20px;
-  background: black;
+  background: #005eb8;
   color: white;
   border: none;
 }
@@ -158,24 +155,39 @@ button {
 
 <!-- HERO -->
 <section class="hero fade">
-  <h1>Healthcare. Reinvented.</h1>
-  <p>AI-powered wearables that detect, predict, and prevent critical conditions.</p>
-
-  <!-- 🔽 Replace with your product image -->
-  <img src="banner.jpg" alt="Product">
+  <h1>AI-Powered Healthcare Wearables</h1>
+  <p>Detect. Monitor. Predict. Prevent.</p>
 </section>
 
 <!-- OFFERING -->
 <section id="offering" class="section fade">
   <h2>Our Offering</h2>
-  <p>End-to-end AI platform for continuous healthcare intelligence.</p>
 
   <div class="grid">
-    <div class="card">Disease Detection</div>
-    <div class="card">Alerts to Primary Care</div>
-    <div class="card">Progression Monitoring</div>
-    <div class="card">Remote Safety</div>
-    <div class="card">Predictive Prognosis</div>
+    <div class="card">
+      <h3>Disease Detection</h3>
+      <p>Identify when a medical condition has occurred in real time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Alerts to Primary Care</h3>
+      <p>Automatically notify doctors during critical events.</p>
+    </div>
+
+    <div class="card">
+      <h3>Disease Progression Monitoring</h3>
+      <p>Track how conditions evolve over time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Remote Safety</h3>
+      <p>Monitor medication side effects remotely.</p>
+    </div>
+
+    <div class="card">
+      <h3>Predictive Prognosis</h3>
+      <p>Forecast future health risks using AI.</p>
+    </div>
   </div>
 </section>
 
@@ -184,48 +196,58 @@ button {
   <h2>Our Solutions</h2>
 
   <div class="grid">
+
     <a href="heart.html">
       <div class="card">
+        <img src="heart.jpg">
         <h3>Heart Attack</h3>
-        <p>Active</p>
+        <p>Real-time cardiac monitoring</p>
       </div>
     </a>
 
-    <div class="card disabled">Stroke</div>
-    <div class="card disabled">Seizures</div>
-    <div class="card disabled">Diabetes</div>
+    <div class="card disabled">
+      <img src="stroke.jpg">
+      <h3>Stroke</h3>
+    </div>
+
+    <div class="card disabled">
+      <img src="seizure.jpg">
+      <h3>Seizures</h3>
+    </div>
+
+    <div class="card disabled">
+      <img src="diabetes.jpg">
+      <h3>Diabetes</h3>
+    </div>
+
   </div>
 </section>
 
-<!-- INVESTOR SECTION -->
+<!-- INVESTOR -->
 <section id="investor" class="section investor fade">
   <h2>Investor Snapshot</h2>
 
   <div class="grid">
     <div>
       <div class="metric">$50B+</div>
-      <p>Wearable Healthcare Market</p>
+      <p>Market Size</p>
     </div>
 
     <div>
-      <div class="metric">10M+</div>
-      <p>Target Patients</p>
-    </div>
-
-    <div>
-      <div class="metric">AI-Driven</div>
-      <p>Proprietary Detection Models</p>
+      <div class="metric">AI First</div>
+      <p>Core Technology</p>
     </div>
 
     <div>
       <div class="metric">B2B + B2C</div>
       <p>Revenue Model</p>
     </div>
-  </div>
 
-  <p style="margin-top:40px;">
-    Arceo is building the next-generation healthcare layer combining hardware, AI, and predictive analytics.
-  </p>
+    <div>
+      <div class="metric">Scalable</div>
+      <p>Global Expansion</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
@@ -242,7 +264,6 @@ button {
 
 <script>
 const items = document.querySelectorAll('.fade');
-
 window.addEventListener('scroll', () => {
   items.forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight - 100) {
